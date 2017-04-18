@@ -393,9 +393,12 @@ RakutenMA.tokens2string = function (tokens) {
   //     ret.push(tokens[i][0] + " [" + tokens[i][1] + "]");
 
   // return ret.join(" | ");
-
-  for (i = 0; i < tokens.length; i ++)
+console.log(tokens)
+  for (i = 0; i < tokens.length; i ++){
+    if(tokens[i][0] != "　"){
       ret.push(tokens[i][0]);
+    }
+  }
   return ret.join("\n");
 
 };
